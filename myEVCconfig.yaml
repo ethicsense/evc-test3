@@ -13,7 +13,7 @@ target:
       port: 39002
       hw: rpi
       os: linux
-      gpu: None
+      gpu: Nonessh
 
 # 노드 소유자 명
 owner: keti # host name
@@ -22,7 +22,7 @@ owner: keti # host name
 # 모델 이름
 model_name: gradio-test # your_model
 # 모델 버전
-version: 1.0
+version: "1.0"
 # 모델이 수행하는 태스크
 task: detection # i.e. classification, segmentation
 # 엣지 노드의 CPU 아키텍처
