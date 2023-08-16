@@ -7,4 +7,5 @@ gradio_cached_examples/
 # ignore gradio flagged dir
 flagged
 
-
+# ignore output files
+video/out/
