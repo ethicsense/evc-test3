@@ -9,7 +9,7 @@ group:
 target:
   *group1:
   -   name: n02
-      ip: deepcase.mynetgear.com
+      ip: evc.re.kr
       port: 33322
       hw: intel_NUC
       os: ubuntu
