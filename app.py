@@ -13,7 +13,7 @@ def video_demo(video):
     cap = cv2.VideoCapture(video)
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    fourcc = cv2.VideoWriter_fourcc(*'avc1')
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter(
         os.path.join(os.path.dirname(__file__),'video/out/output.mp4'),
         fourcc,
@@ -59,7 +59,7 @@ demo = gr.Interface(
 )
 
 if __name__ == "__main__":
-    
+
     demo.launch(
         server_name='0.0.0.0',
         server_port=7860
