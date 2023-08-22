@@ -4,7 +4,7 @@
 activation: gradio # "train" or "pred" or "gradio"
 # 클러스터 그룹명
 group:
-  - &group1 keti_test_nuc
+  - &group2 keti_test_rpi
 # 작업을 수행할 노드
 target:
   *group1:
@@ -14,6 +14,14 @@ target:
       hw: intel_NUC
       os: ubuntu
       gpu: RTX2080
+
+  *group2:
+  -   name: rpi6402
+      ip: evc.re.kr
+      port: 39002
+      hw: rpi
+      os: linux
+      gpu: None
 
 # 노드 소유자 명
 owner: keti # host name
