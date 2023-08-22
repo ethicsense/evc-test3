@@ -10,6 +10,9 @@ RUN echo 'irteam ALL=(ALL) NOPASSWD:ALL' | tee -a /etc/sudoers
 RUN chmod -w /etc/sudoers
 RUN sudo apt-get install -y libgl1-mesa-glx
 RUN sudo apt-get install -y python3-pip
+
+RUN apt-get install -y vim
+
 RUN pip install --upgrade pip
 RUN pip3 install torch torchvision torchaudio
 RUN pip install ultralytics
