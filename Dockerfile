@@ -16,8 +16,6 @@ RUN bash Anaconda3-2023.07-2-Linux-x86_64.sh -b -p $HOME/anaconda
 RUN source ~/anaconda/bin/activate
 RUN conda install opencv
 
-RUN apt-get install -y libgl1-mesa-glx
-
 RUN apt-get install -y vim
 
 RUN pip install --upgrade pip
