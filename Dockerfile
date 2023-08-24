@@ -12,7 +12,10 @@ RUN sudo apt-get install -y python3-pip
 
 # Install Miniconda
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
-RUN wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-armv7l.sh
+# arm64
+RUN wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-armv7l.sh -O ~/miniconda.sh
+## amd64
+# RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
 RUN bash ~/miniconda.sh -b -p $HOME/miniconda
 
 ENV PATH="/root/miniconda/bin:${PATH}"
