@@ -13,11 +13,12 @@ def video_demo(video):
     cap = cv2.VideoCapture(video)
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+    fourcc = cv2.VideoWriter_fourcc(*'h264')
+    fps = int(cap.get(cv2.CAP_PROP_FPS))
     out = cv2.VideoWriter(
         os.path.join(os.path.dirname(__file__),'video/out/output.mp4'),
         fourcc,
-        30.0,
+        fps,
         (width,height)
     )
     output_file = os.path.join(os.path.dirname(__file__),'video/out/output.mp4')
@@ -62,5 +63,5 @@ if __name__ == "__main__":
 
     demo.launch(
         server_name='0.0.0.0',
-        server_port=7860
+        server_port=7862
     )
